@@ -1,6 +1,7 @@
 # AndroidInstrumentationTests
 
-Android instrumentation tests. See [blog post](https://medium.com/@yair.kukielka/android-unit-tests-explained-part-2-a0f1e1413569) for more info:
+Android instrumentation tests. 
+See [blog post](https://medium.com/@yair.kukielka/idlingresource-dagger-and-junit-rules-198e3ae791ff) for more info
 
 #### To run the instrumented tests use:
 `./gradlew connectedAndroidTest`
