@@ -7,17 +7,19 @@ import com.example.androidinstrumentationtests.DemoApplication;
 import com.example.androidinstrumentationtests.di.DemoApplicationComponent;
 import com.jakewharton.espresso.OkHttp3IdlingResource;
 
+import org.junit.rules.ExternalResource;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
 
-public class HttpIdlingResourceRule implements TestRule {
+import okhttp3.OkHttpClient;
+
+public class HttpIdlingResourceRule extends ExternalResource {
 
     private IdlingResource resource;
 
-    public HttpIdlingResourceRule() {
-        DemoApplicationComponent component = DemoApplication.getApplication().getComponent();
-        resource = OkHttp3IdlingResource.create("OkHttp", component.okHttpClient());
+    public HttpIdlingResourceRule(OkHttpClient okHttpClient) {
+        resource = OkHttp3IdlingResource.create("OkHttp", okHttpClient);
     }
 
     @Override

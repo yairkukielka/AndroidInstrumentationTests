@@ -26,7 +26,6 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.1.1'
     compile 'com.android.support:design:24.1.1'
     apt 'com.google.dagger:dagger-compiler:2.5'
@@ -35,7 +34,7 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.4.1'
 
     // Testing-only dependencies
-    androidTestCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
     androidTestCompile 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0'
     androidTestCompile 'com.android.support.test:runner:0.5'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'

@@ -3,6 +3,8 @@ package com.example.androidinstrumentationtests;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import com.example.androidinstrumentationtests.di.DemoApplicationComponent;
+import com.example.androidinstrumentationtests.testutils.HttpIdlingResourceRule;
 import com.example.androidinstrumentationtests.testutils.ThreadPoolIdlingResourceRule;
 
 import org.junit.Rule;
@@ -23,6 +25,9 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> mActivityRule = new ActivityTestRule<>(MainActivity.class);
     @Rule
     public ThreadPoolIdlingResourceRule idlingResourceRule = new ThreadPoolIdlingResourceRule();
+//    @Rule
+//    public HttpIdlingResourceRule rule =
+//            new HttpIdlingResourceRule(DemoApplication.getApplication().getComponent().okHttpClient());
 
     @Test
     public void myTest() {
