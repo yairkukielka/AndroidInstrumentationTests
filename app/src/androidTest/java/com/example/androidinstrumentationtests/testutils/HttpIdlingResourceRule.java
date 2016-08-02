@@ -3,18 +3,15 @@ package com.example.androidinstrumentationtests.testutils;
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.IdlingResource;
 
-import com.example.androidinstrumentationtests.DemoApplication;
-import com.example.androidinstrumentationtests.di.DemoApplicationComponent;
 import com.jakewharton.espresso.OkHttp3IdlingResource;
 
-import org.junit.rules.ExternalResource;
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;
 import org.junit.runners.model.Statement;
 
 import okhttp3.OkHttpClient;
 
-public class HttpIdlingResourceRule extends ExternalResource {
+public class HttpIdlingResourceRule implements TestRule {
 
     private IdlingResource resource;
 
